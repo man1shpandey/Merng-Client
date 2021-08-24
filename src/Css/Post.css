@@ -1,0 +1,144 @@
+.PostContainer {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.CommentContainer {
+    padding: 20px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.postTitle{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+
+.secondRow{
+    display: flex;
+    justify-content: flex-start;
+    color: #627481;
+    margin-top: 5px;
+}
+
+.postUser{
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.postUser:hover{
+    color:#2d363b;
+    text-decoration: underline;
+}
+
+.postTime{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.thirdRow{
+    margin: 20px 0;
+}
+
+.postBody {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+}
+
+.fourthRow{
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+
+.fourthRow div{
+    flex: 1;
+}
+
+.likeButton{
+    border-bottom: 1px lightgray solid;
+    border-top: 1px lightgray solid;
+    border-left: 1px lightgray solid;
+    border-radius: 5px 0 0 5px;
+    display: grid;
+    place-content: center;
+}
+
+.likeButton:hover{
+    background-color: #ff48612c;
+}
+
+.IconContainer{
+    width: fit-content;
+    display: flex;
+}
+
+.IconContainer svg {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.IconContainer h3{
+    color: #627481;
+    padding-top: 1px;
+    font-weight: 400;
+}
+
+
+.commentButton{
+    border-bottom: 1px lightgray solid;
+    border-top: 1px lightgray solid;
+    border-left: 1px lightgray solid;
+    display: grid;
+    place-content: center;
+}
+
+.commentButton:hover{
+    background-color: #48ff1b2c;
+}
+
+.shareButton{
+    border-bottom: 1px lightgray solid;
+    border-top: 1px lightgray solid;
+    border-left: 1px lightgray solid;
+    border-right: 1px lightgray solid;
+    display: grid;
+    place-content: center;
+}
+
+.shareButton:hover{
+    background-color: #fbff003a;
+}
+
+.saveButton{
+    border-bottom: 1px lightgray solid;
+    border-top: 1px lightgray solid;
+    border-right: 1px lightgray solid;
+    border-radius: 0 5px 5px 0;
+    display: grid;
+    place-content: center;
+}
+
+.saveButton:hover{
+    background-color: #006eff25;
+}
+
+
+.deleteButton{
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+
