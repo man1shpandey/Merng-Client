@@ -26,6 +26,9 @@ function App() {
                     </Route>
                     <Route>
                       <Sidebar/>
+                      {
+                        console.log('user')
+                      }
                       <UserRoute exact path='/home' component={Home}/>
                       <UserRoute exact path='/posts/:postId' component={SinglePost}/>
                       <UserRoute exact path='/profile/:username' component={ProfilePage}/>
