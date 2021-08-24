@@ -47,7 +47,7 @@ function AuthProvider(props){
                 initialState.user = decodedToken
             }
         }
-    },[])
+    },[state])
 
     const login = (userData)=>{
         localStorage.setItem("jwtToken", userData.token)
