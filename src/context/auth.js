@@ -35,8 +35,7 @@ function authReducer(state, action){
 }
 
 function AuthProvider(props){
-    const [state, dispatch] = useReducer(authReducer, initialState)
-
+    
     useEffect(()=>{
         if(localStorage.getItem('jwtToken')){
             const decodedToken = jwtDecode(localStorage.getItem('jwtToken'))
@@ -47,7 +46,9 @@ function AuthProvider(props){
                 initialState.user = decodedToken
             }
         }
-    },[state])
+    },[])
+    
+    const [state, dispatch] = useReducer(authReducer, initialState)
 
     const login = (userData)=>{
         localStorage.setItem("jwtToken", userData.token)
