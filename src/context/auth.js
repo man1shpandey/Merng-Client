@@ -45,21 +45,6 @@ function authReducer(state, action){
 function AuthProvider(props){
     
     const [state, dispatch] = useReducer(authReducer, initialState)
-<<<<<<< Updated upstream
-    
-    useEffect(()=>{
-        if(localStorage.getItem('jwtToken')){
-            const decodedToken = jwtDecode(localStorage.getItem('jwtToken'))
-        
-            if(decodedToken.exp * 1000 < Date.now()){
-                localStorage.removeItem('jwtToken')
-            }else{
-                state.user = decodedToken
-            }
-        }
-    },[state])
-=======
->>>>>>> Stashed changes
 
     const login = (userData)=>{
         localStorage.setItem("jwtToken", userData.token)
