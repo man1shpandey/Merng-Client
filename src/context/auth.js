@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer } from 'react';
+import React, { createContext, useReducer } from 'react';
 import jwtDecode from 'jwt-decode' 
 
 
@@ -7,7 +7,15 @@ const initialState =
     user: null
 }
 
+if(localStorage.getItem('jwtToken')){
+    const decodedToken = jwtDecode(localStorage.getItem('jwtToken'))
 
+    if(decodedToken.exp * 1000 < Date.now()){
+        localStorage.removeItem('jwtToken')
+    }else{
+        initialState.user = decodedToken
+    }
+}
 
 const AuthContext = createContext({
     user: null,
@@ -37,6 +45,7 @@ function authReducer(state, action){
 function AuthProvider(props){
     
     const [state, dispatch] = useReducer(authReducer, initialState)
+<<<<<<< Updated upstream
     
     useEffect(()=>{
         if(localStorage.getItem('jwtToken')){
@@ -49,6 +58,8 @@ function AuthProvider(props){
             }
         }
     },[state])
+=======
+>>>>>>> Stashed changes
 
     const login = (userData)=>{
         localStorage.setItem("jwtToken", userData.token)
