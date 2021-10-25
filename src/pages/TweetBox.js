@@ -55,8 +55,8 @@ function TweetBox() {
     return (
         <div className="QuestionBoxContainer">
             <form className="QuestionBox" onSubmit={onSubmit}>  
-                <textarea placeholder="Create a post" className="titleArea" name="title" type="text" value={values.title} onChange={onChange}></textarea>
-                <textarea placeholder="Share what's on your mind" className="bodyArea" name="body" type="text" value={values.body} onChange={onChange}></textarea>
+                <textarea placeholder="Ask a question" className="titleArea" name="title" type="text" value={values.title} onChange={onChange}></textarea>
+                <textarea placeholder="Describe your question" className="bodyArea" name="body" type="text" value={values.body} onChange={onChange}></textarea>
                 <button className={values.body==='' ? "disabledButton" : "TweetButton"} type="submit"> Post </button>
             </form>      
         </div>
