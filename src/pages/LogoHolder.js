@@ -4,7 +4,7 @@ import '../Css/LogoHolder.css'
 function LogoHolder() {
     return (
         <div className="LogoHolderContainer">
-            <h3 className="Logo">Logo</h3>
+            <h3 className="Logo">QnA.com</h3>
             
         </div>
     );
