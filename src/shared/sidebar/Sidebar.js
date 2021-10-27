@@ -18,7 +18,7 @@ function Sidebar() {
     return (
         <div className="SidebarContainer">
             <div className="Sidebar">
-                <h4 className="logoHead" onClick={()=>{history.push('/home')}}>LOGO</h4>
+                <h4 className="logoHead" onClick={()=>{history.push('/home')}}>QnA.com</h4>
                 <div className="RightSide">
 
                 {
