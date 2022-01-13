@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/client/react/context'
 import {setContext} from '@apollo/client/link/context'
 
 const httpLink = createHttpLink({
-    uri: 'https://my-merng-server.herokuapp.com/'
+    uri: 'https://new-merng.herokuapp.com/'
 })
 
 
